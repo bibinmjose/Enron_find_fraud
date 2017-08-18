@@ -1,0 +1,199 @@
+
+new_features	:False
+
+n_features	:20
+
+Classifier	:
+Pipeline(steps=[('selK', SelectKBest(k=9, score_func=<function f_classif at 0x10d8079b0>)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'total_stock_value', 'deferred_income', 'long_term_incentive']
+
+accuracy	:0.840133333333
+precision	:0.372924648787
+recall		:0.292
+f_1			:0.327537857543
+f_2			:0.305247752457
+
+
+======================================================================
+
+
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('selK', SelectKBest(k=8, score_func=<function f_classif at 0x1122079b0>)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'exercised_stock_options', 'total_stock_value', 'deferred_income', 'bonus_log', 'other_log', 'expenses_sqrt']
+
+accuracy	:0.845066666667
+precision	:0.40481786134
+recall		:0.3445
+f_1			:0.372231226364
+f_2			:0.35508142651
+
+
+======================================================================
+
+
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('selK', SelectKBest(k=8, score_func=<function mutual_info_classif at 0x10d651488>)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['bonus', 'shared_receipt_with_poi', 'total_stock_value', 'expenses', 'other', 'bonus_log', 'other_log', 'expenses_sqrt']
+
+accuracy	:0.726466666667
+precision	:0.184329030321
+recall		:0.307
+f_1			:0.230350778466
+f_2			:0.270938134322
+
+
+======================================================================
+
+
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('selK', SelectKBest(k=2, score_func=<function mutual_info_classif at 0x10c9b5488>)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['bonus', 'bonus_log']
+
+accuracy	:0.806866666667
+precision	:0.205128205128
+recall		:0.156
+f_1			:0.177222380006
+f_2			:0.163848335259
+
+
+======================================================================
+
+
+new_features	:False
+
+n_features	:20
+
+Classifier	:
+Pipeline(steps=[('selK', SelectKBest(k=9, score_func=<function f_classif at 0x1107b09b0>)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'total_stock_value', 'deferred_income', 'long_term_incentive']
+
+accuracy	:0.840133333333
+precision	:0.372924648787
+recall		:0.292
+f_1			:0.327537857543
+f_2			:0.305247752457
+
+
+======================================================================
+
+
+new_features	:False
+
+n_features	:20
+
+Classifier	:
+Pipeline(steps=[('scaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('selK', SelectKBest(k=13, score_func=<function f_classif at 0x109f9a9b0>)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'total_stock_value', 'expenses', 'loan_advances', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person']
+
+accuracy	:0.781466666667
+precision	:0.306948640483
+recall		:0.508
+f_1			:0.382674199623
+f_2			:0.449160035367
+
+
+======================================================================
+
+
+new_features	:False
+
+n_features	:20
+
+Classifier	:
+Pipeline(steps=[('scaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('selK', SelectKBest(k=9, score_func=<function mutual_info_classif at 0x1185f5488>)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'deferral_payments', 'restricted_stock', 'shared_receipt_with_poi', 'total_stock_value', 'expenses', 'other', 'email_address']
+
+accuracy	:0.467066666667
+precision	:0.165811775201
+recall		:0.7435
+f_1			:0.271152443472
+f_2			:0.438177746346
+
+
+======================================================================
+
+
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('scaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('selK', SelectKBest(k=12, score_func=<function mutual_info_classif at 0x1137f5488>)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['bonus', 'restricted_stock', 'shared_receipt_with_poi', 'total_stock_value', 'expenses', 'other', 'from_this_person_to_poi', 'email_address', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt']
+
+accuracy	:0.600666666667
+precision	:0.208077260755
+recall		:0.711
+f_1			:0.321937966946
+f_2			:0.47930430093
+
+
+======================================================================
+
+
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('scaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('selK', SelectKBest(k=12, score_func=<function mutual_info_classif at 0x113621488>)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'restricted_stock', 'shared_receipt_with_poi', 'total_stock_value', 'expenses', 'other', 'director_fees', 'email_address', 'bonus_log', 'other_log', 'expenses_sqrt']
+
+accuracy	:0.5972
+precision	:0.206420685648
+recall		:0.7105
+f_1			:0.31990094552
+f_2			:0.477358237033
+
+
+======================================================================
+
+
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('scaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('selK', SelectKBest(k=17, score_func=<function f_classif at 0x11098e9b0>)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'total_stock_value', 'expenses', 'loan_advances', 'deferred_income', 'long_term_incentive', 'email_address', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.761933333333
+precision	:0.2968709594
+recall		:0.574
+f_1			:0.391341401057
+f_2			:0.483694278251
+
+
+======================================================================

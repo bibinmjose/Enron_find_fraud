@@ -1,0 +1,463 @@
+
+ID_	:	DT_1
+new_features	:False
+
+n_features	:20
+
+Classifier	:
+Pipeline(steps=[('classifDT', DecisionTreeClassifier(class_weight=None, criterion='entropy', max_depth=5,
+            max_features='sqrt', max_leaf_nodes=None,
+            min_impurity_split=1e-07, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=True, random_state=42, splitter='best'))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person']
+
+accuracy	:0.820133333333
+precision	:0.257301808067
+recall		:0.185
+f_1			:0.21524141943
+f_2			:0.196016105107
+
+
+======================================================================
+
+
+
+ID_	:	DT_2
+new_features	:False
+
+n_features	:20
+
+Classifier	:
+Pipeline(steps=[('classifDT', DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
+            max_features=None, max_leaf_nodes=None,
+            min_impurity_split=1e-07, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=True, random_state=42, splitter='best'))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person']
+
+accuracy	:0.7936
+precision	:0.223790322581
+recall		:0.222
+f_1			:0.222891566265
+f_2			:0.222355769231
+
+
+======================================================================
+
+
+
+ID_	:	DT_3
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('classifDT', DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
+            max_features=None, max_leaf_nodes=None,
+            min_impurity_split=1e-07, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=True, random_state=42, splitter='best'))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.7978
+precision	:0.236075625958
+recall		:0.231
+f_1		:0.233510235027
+f_2		:0.231997589635
+
+
+======================================================================
+
+
+
+ID_	:	DT_4
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('classifDT', DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
+            max_features=None, max_leaf_nodes=None,
+            min_impurity_split=1e-07, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=True, random_state=42, splitter='best'))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.797866666667
+precision	:0.236196319018
+recall		:0.231
+f_1		:0.233569261881
+f_2		:0.232020891924
+
+
+==============================pca========================================
+
+
+
+ID_	:	DT_5
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('pca', PCA(copy=True, iterated_power='auto', n_components=11, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifDT', DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
+          ...split=2, min_weight_fraction_leaf=0.0,
+            presort=True, random_state=42, splitter='best'))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.7918
+precision	:0.229918229918
+recall		:0.239
+f_1		:0.234371169404
+f_2		:0.237126699077
+
+
+======================================================================
+
+
+
+ID_	:	DT_6
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('classifDT', DecisionTreeClassifier(class_weight=None, criterion='entropy', max_depth=None,
+            max_features=None, max_leaf_nodes=None,
+            min_impurity_split=1e-07, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=True, random_state=42, splitter='best'))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.8076
+precision	:0.2544345898
+recall		:0.2295
+f_1		:0.241324921136
+f_2		:0.234088127295
+
+
+======================================================================
+
+
+
+ID_	:	DT_7
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('classifDT', DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=6,
+            max_features='log2', max_leaf_nodes=None,
+            min_impurity_split=1e-07, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=True, random_state=42, splitter='best'))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.831666666667
+precision	:0.361477572559
+recall		:0.3425
+f_1		:0.351732991014
+f_2		:0.346134411319
+
+
+======================================================================
+
+
+
+ID_	:	DT_8
+new_features	:False
+
+n_features	:20
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('classifDT', DecisionTreeClassifier(class_weight=None, criterion='entropy', max_depth=5,
+            max_features='sqrt', max_leaf_nodes=None,
+            min_impurity_split=1e-07, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=True, random_state=42, splitter='best'))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person']
+
+accuracy	:0.820133333333
+precision	:0.257301808067
+recall		:0.185
+f_1		:0.21524141943
+f_2		:0.196016105107
+
+
+======================================================================
+
+
+
+ID_	:	DT_9
+new_features	:True
+
+n_features	:6
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('rfe', RFE(estimator=DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
+            max_features=None, max_leaf_nodes=None,
+            min_impurity_split=1e-07, min_samples_leaf=1,
+            min_samp...split=2, min_weight_fraction_leaf=0.0,
+            presort=True, random_state=42, splitter='best'))])
+
+Selected Features	:
+['total_payments', 'exercised_stock_options', 'other_log']
+
+accuracy	:0.813666666667
+precision	:0.23865877712
+recall		:0.1815
+f_1		:0.206191422891
+f_2		:0.190631236215
+
+
+======================================================================
+
+
+
+ID_	:	DT_10
+new_features	:True
+
+n_features	:6
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('rfe', RFE(estimator=DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
+            max_features=None, max_leaf_nodes=None,
+            min_impurity_split=1e-07, min_samples_leaf=1,
+            min_samp...split=2, min_weight_fraction_leaf=0.0,
+            presort=True, random_state=42, splitter='best'))])
+
+Selected Features	:
+['total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'expenses', 'bonus_log']
+
+accuracy	:0.8172
+precision	:0.263994910941
+recall		:0.2075
+f_1		:0.232362821948
+f_2		:0.2167781028
+
+
+=================================best so far====================================
+
+
+
+ID_	:	DT_11
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('classifDT', DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=5,
+            max_features='log2', max_leaf_nodes=None,
+            min_impurity_split=1e-07, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=True, random_state=42, splitter='best'))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.853733333333
+precision	:0.443865740741
+recall		:0.3835
+f_1		:0.411480686695
+f_2		:0.394222861842
+
+
+======================================================================
+
+
+ID_	:	DT_12
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('rfe', RFE(estimator=DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
+            max_features=None, max_leaf_nodes=None,
+            min_impurity_split=1e-07, min_samples_leaf=1,
+            min_samp...split=2, min_weight_fraction_leaf=0.0,
+            presort=True, random_state=42, splitter='best'))])
+
+Selected Features	:
+['total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'expenses', 'bonus_log']
+
+accuracy	:0.809266666667
+precision	:0.256916996047
+recall		:0.2275
+f_1		:0.241315300981
+f_2		:0.23283184935
+
+
+======================================================================
+
+
+
+ID_	:	DT_13
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('StandardScaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('classifDT', DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=5,
+            max_features='log2', max_leaf_nodes=None,
+            min_impurity_split=1e-07, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=True, random_state=42, splitter='best'))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.853666666667
+precision	:0.443609022556
+recall		:0.3835
+f_1		:0.411370340574
+f_2		:0.394182341453
+
+
+======================================================================
+
+
+
+ID_	:	DT_14
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('pca', PCA(copy=True, iterated_power='auto', n_components=None, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifDT', DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=4,
+           ...split=2, min_weight_fraction_leaf=0.0,
+            presort=True, random_state=42, splitter='best'))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.820666666667
+precision	:0.295616113744
+recall		:0.2495
+f_1		:0.270607375271
+f_2		:0.257535094963
+
+
+======================================================================
+
+
+
+ID_	:	DT_15
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('classifDT', DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=3,
+            max_features='sqrt', max_leaf_nodes=5,
+            min_impurity_split=1e-07, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=True, random_state=42, splitter='best'))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.848866666667
+precision	:0.421052631579
+recall		:0.356
+f_1		:0.385803305337
+f_2		:0.367351150552
+
+
+======================================================================
+
+
+
+ID_	:	DT_16
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('classifDT', DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=8,
+            max_features='sqrt', max_leaf_nodes=None,
+            min_impurity_split=1e-07, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=True, random_state=67, splitter='best'))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.8116
+precision	:0.278670953912
+recall		:0.26
+f_1		:0.269011898603
+f_2		:0.263531319684
+
+
+======================================================================
+
+
+
+ID_	:	DT_17
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('classifDT', DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=5,
+            max_features='sqrt', max_leaf_nodes=None,
+            min_impurity_split=1e-07, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=True, random_state=43, splitter='best'))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.8284
+precision	:0.325213154689
+recall		:0.267
+f_1		:0.293245469522
+f_2		:0.276913503423
+
+
+======================================================================
+
+ID_	:	DT_18
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('StandardScaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('classifDT', DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=5,
+            max_features='log2', max_leaf_nodes=None,
+            min_impurity_split=1e-07, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=True, random_state=42, splitter='best'))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.853666666667
+precision	:0.443609022556
+recall		:0.3835
+f_1		:0.411370340574
+f_2		:0.394182341453
+
+
+======================================================================
+
+

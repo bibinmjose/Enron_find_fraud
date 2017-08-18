@@ -1,0 +1,587 @@
+
+Best NB Classifier - ID_ :	NB_20
+++++++++++++++++++++++++
+
+ID_	:	NB_1
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.738
+precision	:0.226007950028
+recall		:0.398
+f_1			:0.288301340094
+f_2			:0.345426141295
+
+
+======================================================================
+
+
+ID_	:	NB_2
+new_features	:False
+
+n_features	:20
+
+Classifier	:
+Pipeline(steps=[('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person']
+
+accuracy	:0.739
+precision	:0.226037195994
+recall		:0.395
+f_1			:0.287534121929
+f_2			:0.343627664202
+
+
+======================================================================
+
+
+
+ID_	:	NB_3
+new_features	:False
+
+n_features	:20
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person']
+
+accuracy	:0.427866666667
+precision	:0.168245967742
+recall		:0.8345
+f_1			:0.280033557047
+f_2			:0.465680803571
+
+
+======================================================================
+
+
+
+ID_	:	NB_4
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.559266666667
+precision	:0.201244006738
+recall		:0.7765
+f_1			:0.31964598127
+f_2			:0.49405102755
+
+
+======================================================================
+
+
+
+ID_	:	NB_5
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('StandardScaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.5536
+precision	:0.19905152525
+recall		:0.7765
+f_1			:0.316874107325
+f_2			:0.491393494494
+
+
+======================================================================
+
+
+
+ID_	:	NB_6
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('selK', SelectKBest(k=14, score_func=<function f_classif at 0x117daca28>)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'total_stock_value', 'loan_advances', 'deferred_income', 'long_term_incentive', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt']
+
+accuracy	:0.846933333333
+precision	:0.400403768506
+recall		:0.2975
+f_1			:0.341365461847
+f_2			:0.313620071685
+
+
+======================================================================
+
+
+
+ID_	:	NB_7
+new_features	:True
+
+n_features	:14
+
+Classifier	:
+Pipeline(steps=[('selK', SelectKBest(k=10, score_func=<function f_classif at 0x116988a28>)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'exercised_stock_options', 'total_stock_value', 'deferred_income', 'long_term_incentive', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt']
+
+accuracy	:0.8376
+precision	:0.368357487923
+recall		:0.305
+f_1			:0.333698030635
+f_2			:0.315865782933
+
+
+======================================================================
+
+
+
+ID_	:	NB_8
+new_features	:True
+
+n_features	:8
+
+Classifier	:
+Pipeline(steps=[('selK', SelectKBest(k=3, score_func=<function f_classif at 0x10fd88a28>)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['bonus', 'exercised_stock_options', 'total_stock_value']
+
+accuracy	:0.839
+precision	:0.35231316726
+recall		:0.2475
+f_1			:0.290748898678
+f_2			:0.263157894737
+
+
+======================================================================
+
+
+
+ID_	:	NB_9
+new_features	:True
+
+n_features	:8
+
+Classifier	:
+Pipeline(steps=[('selK', SelectKBest(k=7, score_func=<function f_classif at 0x10b943a28>)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'exercised_stock_options', 'total_stock_value', 'bonus_log', 'other_log', 'expenses_sqrt']
+
+accuracy	:0.845466666667
+precision	:0.407986111111
+recall		:0.3525
+f_1			:0.37821888412
+f_2			:0.362356085526
+
+'selK__k': np.arange(6,n_features) # since pca analysis shows a min of 6 components to describe 99.9 % features
+
+======================================================================
+
+
+
+ID_	:	NB_10
+new_features	:True
+
+n_features	:8
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('selK', SelectKBest(k=7, score_func=<function f_classif at 0x111be2a28>)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'exercised_stock_options', 'total_stock_value', 'bonus_log', 'other_log', 'expenses_sqrt']
+
+accuracy	:0.829733333333
+precision	:0.345596432553
+recall		:0.31
+f_1			:0.326831839747
+f_2			:0.316520318562
+
+'selK__k': np.arange(6,n_features)
+======================================================================
+
+
+
+ID_	:	NB_11
+new_features	:True
+
+n_features	:8
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('selK', SelectKBest(k=3, score_func=<function f_classif at 0x111fdba28>)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['bonus', 'exercised_stock_options', 'total_stock_value']
+
+accuracy	:0.839666666667
+precision	:0.357695010541
+recall		:0.2545
+f_1			:0.297399941572
+f_2			:0.270083837419
+
+
+======================================================================
+
+
+
+ID_	:	NB_12
+new_features	:True
+
+n_features	:8
+
+Classifier	:
+Pipeline(steps=[('StandardScaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('selK', SelectKBest(k=7, score_func=<function f_classif at 0x10b6c1a28>)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'exercised_stock_options', 'total_stock_value', 'bonus_log', 'other_log', 'expenses_sqrt']
+
+accuracy	:0.829733333333
+precision	:0.345596432553
+recall		:0.31
+f_1			:0.326831839747
+f_2			:0.316520318562
+
+
+======================================================================
+
+
+
+ID_	:	NB_13
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('StandardScaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('selK', SelectKBest(k=17, score_func=<function f_classif at 0x119009a28>)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'total_stock_value', 'expenses', 'loan_advances', 'deferred_income', 'long_term_incentive', 'email_address', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.761933333333
+precision	:0.2968709594
+recall		:0.574
+f_1			:0.391341401057
+f_2			:0.483694278251
+
+
+=========================PCA=========================================
+
+
+
+ID_	:	NB_14
+new_features	:True
+
+n_features	:8
+
+Classifier	:
+Pipeline(steps=[('pca', PCA(copy=True, iterated_power='auto', n_components=None, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.8216
+precision	:0.315300546448
+recall		:0.2885
+f_1			:0.301305483029
+f_2			:0.293489318413
+
+
+======================================================================
+
+
+
+ID_	:	NB_15
+new_features	:True
+
+n_features	:7
+
+Classifier	:
+Pipeline(steps=[('pca', PCA(copy=True, iterated_power='auto', n_components=4, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.8644
+precision	:0.483778625954
+recall		:0.2535
+f_1			:0.332677165354
+f_2			:0.280172413793
+
+
+======================================================================
+
+
+
+ID_	:	NB_16
+new_features	:True
+
+n_features	:7
+
+Classifier	:
+Pipeline(steps=[('pca', PCA(copy=True, iterated_power='auto', n_components=5, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.863533333333
+precision	:0.476044852192
+recall		:0.2335
+f_1			:0.313317678631
+f_2			:0.259993319229
+
+'pca__n_components': np.arange(5,7)
+======================================================================
+
+
+ID_	:	NB_17
+new_features	:True
+
+n_features	:7
+
+Classifier	:
+Pipeline(steps=[('pca', PCA(copy=True, iterated_power='auto', n_components=4, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.8644
+precision	:0.483778625954
+recall		:0.2535
+f_1			:0.332677165354
+f_2			:0.280172413793
+
+
+======================================================================
+
+
+
+ID_	:	NB_18
+new_features	:True
+
+n_features	:4
+
+Classifier	:
+Pipeline(steps=[('pca', PCA(copy=True, iterated_power='auto', n_components=3, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.8714
+precision	:0.533906399236
+recall		:0.2795
+f_1			:0.366918280276
+f_2			:0.308942190781
+
+
+======================================================================
+
+
+
+ID_	:	NB_19
+new_features	:True
+
+n_features	:3
+
+Classifier	:
+Pipeline(steps=[('pca', PCA(copy=True, iterated_power='auto', n_components=2, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.874066666667
+precision	:0.555223880597
+recall		:0.279
+f_1			:0.371381031614
+f_2			:0.309827873404
+
+
+======================================================================
+
+
+
+ID_	:	NB_20
+new_features	:True
+
+n_features	:3
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('pca', PCA(copy=True, iterated_power='auto', n_components=2, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.769133333333
+precision	:0.306019623442
+recall		:0.577
+f_1			:0.399930687922
+f_2			:0.490187749554
+
+
+======================================================================
+
+
+
+
+ID_	:	NB_21
+new_features	:True
+
+n_features	:3
+
+Classifier	:
+Pipeline(steps=[('StandardScaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('pca', PCA(copy=True, iterated_power='auto', n_components=2, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.8418
+precision	:0.324882629108
+recall		:0.173
+f_1			:0.225774877651
+f_2			:0.19084390513
+
+
+======================================================================
+
+
+
+ID_	:	NB_22
+new_features	:True
+
+n_features	:5
+
+Classifier	:
+Pipeline(steps=[('StandardScaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('pca', PCA(copy=True, iterated_power='auto', n_components=5, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.834733333333
+precision	:0.320867614061
+recall		:0.2145
+f_1			:0.257117171112
+f_2			:0.229731177038
+
+
+======================================================================
+
+
+
+ID_	:	NB_23
+new_features	:True
+
+n_features	:4
+
+Classifier	:
+Pipeline(steps=[('StandardScaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('pca', PCA(copy=True, iterated_power='auto', n_components=4, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.833066666667
+precision	:0.317391304348
+recall		:0.219
+f_1			:0.259171597633
+f_2			:0.233475479744
+
+
+======================================================================
+
+
+
+ID_	:	NB_24
+new_features	:True
+
+n_features	:3
+
+Classifier	:
+Pipeline(steps=[('StandardScaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('pca', PCA(copy=True, iterated_power='auto', n_components=3, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.838
+precision	:0.310070671378
+recall		:0.1755
+f_1			:0.224137931034
+f_2			:0.192181340342
+
+
+======================================================================
+
+
+
+ID_	:	NB_25
+new_features	:True
+
+n_features	:2
+
+Classifier	:
+Pipeline(steps=[('StandardScaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('pca', PCA(copy=True, iterated_power='auto', n_components=2, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.8418
+precision	:0.324882629108
+recall		:0.173
+f_1			:0.225774877651
+f_2			:0.19084390513
+
+
+======================================================================
+
+
+
+ID_	:	NB_26
+new_features	:True
+
+n_features	:1
+
+Classifier	:
+Pipeline(steps=[('StandardScaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('pca', PCA(copy=True, iterated_power='auto', n_components=1, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifNB', GaussianNB(priors=None))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.860066666667
+precision	:0.35734870317
+recall		:0.062
+f_1			:0.105666808692
+f_2			:0.0742781837786
+
+
+======================================================================
+

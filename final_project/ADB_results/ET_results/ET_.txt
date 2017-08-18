@@ -1,0 +1,104 @@
+
+ID_	:	ET_1
+new_features	:False
+
+n_features	:20
+
+Classifier	:
+Pipeline(steps=[('classifET', ExtraTreeClassifier(class_weight=None, criterion='gini', max_depth=9,
+          max_features='sqrt', max_leaf_nodes=None,
+          min_impurity_split=1e-07, min_samples_leaf=1,
+          min_samples_split=2, min_weight_fraction_leaf=0.0,
+          random_state=42, splitter='random'))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person']
+
+accuracy	:0.851
+precision	:0.384690873405
+recall		:0.196
+f_1		:0.259688638622
+f_2		:0.217318993237
+
+
+======================================================================
+
+
+
+ID_	:	ET_1
+new_features	:False
+
+n_features	:20
+
+Classifier	:
+Pipeline(steps=[('classifET', ExtraTreeClassifier(class_weight=None, criterion='gini', max_depth=9,
+          max_features='sqrt', max_leaf_nodes=None,
+          min_impurity_split=1e-07, min_samples_leaf=1,
+          min_samples_split=2, min_weight_fraction_leaf=0.0,
+          random_state=42, splitter='random'))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person']
+
+accuracy	:0.851
+precision	:0.384690873405
+recall		:0.196
+f_1		:0.259688638622
+f_2		:0.217318993237
+
+
+======================================================================
+
+
+
+ID_	:	ET_2
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('classifET', ExtraTreeClassifier(class_weight=None, criterion='gini', max_depth=7,
+          max_features='log2', max_leaf_nodes=None,
+          min_impurity_split=1e-07, min_samples_leaf=1,
+          min_samples_split=2, min_weight_fraction_leaf=0.0,
+          random_state=42, splitter='random'))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.862333333333
+precision	:0.459425717853
+recall		:0.184
+f_1		:0.262763298822
+f_2		:0.20906715146
+
+
+======================================================================
+
+
+
+ID_	:	ET_3
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('classifET', ExtraTreeClassifier(class_weight=None, criterion='gini', max_depth=7,
+          max_features='log2', max_leaf_nodes=None,
+          min_impurity_split=1e-07, min_samples_leaf=1,
+          min_samples_split=2, min_weight_fraction_leaf=0.0,
+          random_state=42, splitter='random'))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.862333333333
+precision	:0.459425717853
+recall		:0.184
+f_1		:0.262763298822
+f_2		:0.20906715146
+
+
+======================================================================
+
+

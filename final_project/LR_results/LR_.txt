@@ -1,0 +1,532 @@
+
+Best LR : ID_= 5,6,7
+
+ID_	:	LR_1
+new_features	:False
+
+n_features	:20
+
+Classifier	:
+Pipeline(steps=[('classifLR', LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=1e-06,
+          verbose=0, warm_start=False))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person']
+
+accuracy	:0.7842
+precision	:0.182331792501
+recall		:0.1775
+f_1			:0.179883455789
+f_2			:0.178445762541
+
+
+======================================================================
+
+
+
+ID_	:	LR_2
+new_features	:False
+
+n_features	:20
+
+Classifier	:
+Pipeline(steps=[('pca', PCA(copy=True, iterated_power='auto', n_components=1, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifLR', LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=1e-06,
+          verbose=0, warm_start=False))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person']
+
+accuracy	:0.8704
+precision	:0.535264483627
+recall		:0.2125
+f_1			:0.304223335719
+f_2			:0.241642028656
+
+
+======================================================================
+
+
+
+ID_	:	LR_3
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('pca', PCA(copy=True, iterated_power='auto', n_components=16, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifLR', LogisticRegression(C=0.10000000000000001, class_weight=None, dual=False,
+          fit_intercept=True, intercept_scaling=1, max_iter=100,
+          multi_class='ovr', n_jobs=1, penalty='l2', random_state=None,
+          solver='liblinear', tol=1e-06, verbose=0, warm_start=False))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.8374
+precision	:0.341057204924
+recall		:0.2355
+f_1			:0.278615794144
+f_2			:0.251039334826
+
+
+======================================================================
+
+
+
+ID_	:	LR_4
+new_features	:True
+
+n_features	:6
+
+Classifier	:
+Pipeline(steps=[('pca', PCA(copy=True, iterated_power='auto', n_components=1, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifLR', LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=1e-06,
+          verbose=0, warm_start=False))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.8704
+precision	:0.535264483627
+recall		:0.2125
+f_1			:0.304223335719
+f_2			:0.241642028656
+
+
+==========================bestLR============================================
+
+
+
+ID_	:	LR_5
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('pca', PCA(copy=True, iterated_power='auto', n_components=19, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifLR', LogisticRegression(C=1000000.0, class_weight=None, dual=False,
+          fit_intercept=True, intercept_scaling=1, max_iter=100,
+          multi_class='ovr', n_jobs=1, penalty='l2', random_state=None,
+          solver='liblinear', tol=1e-06, verbose=0, warm_start=False))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.845066666667
+precision	:0.416923076923
+recall		:0.4065
+f_1			:0.41164556962
+f_2			:0.408542713568
+
+
+======================================================================
+
+
+ID_	:	LR_6
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('StandardScaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('pca', PCA(copy=True, iterated_power='auto', n_components=1, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifLR', LogisticRegression(C=9.9999999999999995e-07, class_weight=None, dual=False...lty='l2', random_state=None,
+          solver='liblinear', tol=1e-06, verbose=0, warm_start=False))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.766733333333
+precision	:0.345750154353
+recall		:0.84
+f_1			:0.489867327599
+f_2			:0.653238976592
+
+
+======================================================================
+
+
+
+ID_	:	LR_7
+new_features	:False
+
+n_features	:20
+
+Classifier	:
+Pipeline(steps=[('StandardScaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('pca', PCA(copy=True, iterated_power='auto', n_components=1, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifLR', LogisticRegression(C=0.01, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=1e-06,
+          verbose=0, warm_start=False))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person']
+
+accuracy	:0.831666666667
+precision	:0.351443123939
+recall		:0.3105
+f_1			:0.329705335811
+f_2			:0.317907238661
+
+
+======================================================================
+
+
+
+ID_	:	LR_8
+new_features	:False
+
+n_features	:20
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('pca', PCA(copy=True, iterated_power='auto', n_components=18, random_state=None,
+  svd_solver='auto', tol=0.0, whiten=False)), ('classifLR', LogisticRegression(C=1000000.0, class_weight=None, dual=False,
+          fit_intercept=True, intercept_scaling=1, max_iter=100,
+          multi_class='ovr', n_jobs=1, penalty='l2', random_state=None,
+          solver='liblinear', tol=1e-06, verbose=0, warm_start=False))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person']
+
+accuracy	:0.8238
+precision	:0.294830887045
+recall		:0.231
+f_1			:0.259041211102
+f_2			:0.241455001568
+
+
+============================kBest=====================================
+
+
+
+ID_	:	LR_9
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('selK', SelectKBest(k=23, score_func=<function f_classif at 0x10cf29a28>)), ('classifLR', LogisticRegression(C=100000.0, class_weight=None, dual=False,
+          fit_intercept=True, intercept_scaling=1, max_iter=100,
+          multi_class='ovr', n_jobs=1, penalty='l2', random_state=None,
+          solver='liblinear', tol=1e-06, verbose=0, warm_start=False))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'total_stock_value', 'expenses', 'loan_advances', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.826533333333
+precision	:0.345799180328
+recall		:0.3375
+f_1			:0.341599190283
+f_2			:0.339127813505
+
+
+======================================================================
+
+
+
+ID_	:	LR_10
+new_features	:False
+
+n_features	:20
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('selK', SelectKBest(k=19, score_func=<function f_classif at 0x1189dfa28>)), ('classifLR', LogisticRegression(C=1000000.0, class_weight=None, dual=False,
+          fit_intercept=True, intercept_scaling=1, max_iter=100,
+          multi_class='ovr', n_jobs=1, penalty='l2', random_state=None,
+          solver='liblinear', tol=1e-06, verbose=0, warm_start=False))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person']
+
+accuracy	:0.822733333333
+precision	:0.278412911903
+recall		:0.207
+f_1			:0.237453398337
+f_2			:0.218193317171
+
+
+======================================overfitting================================
+
+
+
+ID_	:	LR_11
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('StandardScaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('selK', SelectKBest(k=19, score_func=<function f_classif at 0x10c7daa28>)), ('classifLR', LogisticRegression(C=9.9999999999999995e-08, class_weight=None, dual=False,
+          fit_intercept=True, intercept_scaling=1, max_iter=100,
+          multi_class='ovr', n_jobs=1, penalty='l2', random_state=None,
+          solver='liblinear', tol=1e-06, verbose=0, warm_start=False))])
+
+Selected Features	:
+['salary', 'bonus', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'total_stock_value', 'expenses', 'loan_advances', 'other', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.766133333333
+precision	:0.335443037975
+recall		:0.7685
+f_1			:0.467031297478
+f_2			:0.61079319663
+
+
+======================================================================
+
+
+
+ID_	:	LR_12
+new_features	:True
+
+n_features	:5
+
+Classifier	:
+Pipeline(steps=[('StandardScaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('selK', SelectKBest(k=3, score_func=<function f_classif at 0x1179a9a28>)), ('classifLR', LogisticRegression(C=9.9999999999999995e-08, class_weight=None, dual=False,
+          fit_intercept=True, intercept_scaling=1, max_iter=100,
+          multi_class='ovr', n_jobs=1, penalty='l2', random_state=None,
+          solver='liblinear', tol=1e-06, verbose=0, warm_start=False))])
+
+Selected Features	:
+['bonus', 'exercised_stock_options', 'total_stock_value']
+
+accuracy	:0.857266666667
+precision	:0.419243986254
+recall		:0.183
+f_1			:0.254785938044
+f_2			:0.206243660543
+
+
+======================================================================
+
+
+
+ID_	:	LR_13
+new_features	:True
+
+n_features	:5
+
+Classifier	:
+Pipeline(steps=[('StandardScaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('selK', SelectKBest(k=3, score_func=<function f_classif at 0x114c05a28>)), ('classifLR', LogisticRegression(C=9.9999999999999995e-08, class_weight=None, dual=False,
+          fit_intercept=True, intercept_scaling=1, max_iter=100,
+          multi_class='ovr', n_jobs=1, penalty='l2', random_state=None,
+          solver='liblinear', tol=1e-06, verbose=0, warm_start=False))])
+
+Selected Features	:
+['bonus', 'exercised_stock_options', 'total_stock_value']
+
+accuracy	:0.857266666667
+precision	:0.419243986254
+recall		:0.183
+f_1			:0.254785938044
+f_2			:0.206243660543
+
+
+======================================================================
+
+
+
+ID_	:	LR_14
+new_features	:True
+
+n_features	:5
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('selK', SelectKBest(k=3, score_func=<function f_classif at 0x10ee05a28>)), ('classifLR', LogisticRegression(C=100.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=1e-06,
+          verbose=0, warm_start=False))])
+
+Selected Features	:
+['bonus', 'exercised_stock_options', 'total_stock_value']
+
+accuracy	:0.859733333333
+precision	:0.41975308642
+recall		:0.136
+f_1			:0.205438066465
+f_2			:0.157261794635
+
+
+================================rfe======================================
+
+
+
+ID_	:	LR_15
+new_features	:True
+
+n_features	:6
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('rfe', RFE(estimator=LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='libl...lty='l2', random_state=None, solver='liblinear', tol=1e-06,
+          verbose=0, warm_start=False))])
+
+Selected Features	:
+['bonus', 'deferral_payments', 'exercised_stock_options', 'deferred_income', 'other_log', 'expenses_sqrt']
+
+accuracy	:0.864266666667
+precision	:0.470297029703
+recall		:0.1425
+f_1			:0.218726016884
+f_2			:0.165582151987
+
+
+======================================================================
+
+
+
+ID_	:	LR_16
+new_features	:True
+
+n_features	:5
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('rfe', RFE(estimator=LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='libl...lty='l2', random_state=None, solver='liblinear', tol=1e-06,
+          verbose=0, warm_start=False))])
+
+Selected Features	:
+['bonus', 'exercised_stock_options', 'deferred_income', 'other_log', 'expenses_sqrt']
+
+accuracy	:0.863466666667
+precision	:0.458041958042
+recall		:0.131
+f_1			:0.203732503888
+f_2			:0.152823145124
+
+
+======================================================================
+
+
+
+ID_	:	LR_17
+new_features	:True
+
+n_features	:5
+
+Classifier	:
+Pipeline(steps=[('rfe', RFE(estimator=LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False),
+  n_f...lty='l2', random_state=None, solver='liblinear', tol=1e-06,
+          verbose=0, warm_start=False))])
+
+Selected Features	:
+['bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.864133333333
+precision	:0.467128027682
+recall		:0.135
+f_1			:0.209464701319
+f_2			:0.157379342504
+
+
+======================================================================
+
+
+
+ID_	:	LR_18
+new_features	:True
+
+n_features	:6
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('rfe', RFE(estimator=LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='libl...lty='l2', random_state=None, solver='liblinear', tol=1e-06,
+          verbose=0, warm_start=False))])
+
+Selected Features	:
+['bonus', 'deferral_payments', 'exercised_stock_options', 'deferred_income', 'other_log', 'expenses_sqrt']
+
+accuracy	:0.864266666667
+precision	:0.470297029703
+recall		:0.1425
+f_1			:0.218726016884
+f_2			:0.165582151987
+
+
+================================overfitting======================================
+
+
+
+ID_	:	LR_18
+new_features	:True
+
+n_features	:25
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('rfe', RFE(estimator=LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='libl...lty='l2', random_state=None,
+          solver='liblinear', tol=1e-06, verbose=0, warm_start=False))])
+
+Selected Features	:
+['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
+
+accuracy	:0.838333333333
+precision	:0.392730943968
+recall		:0.389
+f_1			:0.390856568701
+f_2			:0.389740506963
+
+
+======================================================================
+
+
+ID_	:	LR_19
+new_features	:True
+
+n_features	:6
+
+Classifier	:
+Pipeline(steps=[('MinMaxscaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('rfe', RFE(estimator=LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='libl...lty='l2', random_state=None, solver='liblinear', tol=1e-06,
+          verbose=0, warm_start=False))])
+
+Selected Features	:
+['bonus', 'deferral_payments', 'exercised_stock_options', 'deferred_income', 'other_log', 'expenses_sqrt']
+
+accuracy	:0.864266666667
+precision	:0.470297029703
+recall		:0.1425
+f_1			:0.218726016884
+f_2			:0.165582151987
+
+
+======================================================================
+
+
+
+ID_	:	LR_20
+new_features	:True
+
+n_features	:12
+
+Classifier	:
+Pipeline(steps=[('StandardScaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('rfe', RFE(estimator=LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None,...lty='l2', random_state=None,
+          solver='liblinear', tol=1e-06, verbose=0, warm_start=False))])
+
+Selected Features	:
+['to_messages', 'deferral_payments', 'exercised_stock_options', 'shared_receipt_with_poi', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'deferred_income', 'other_log', 'expenses_sqrt']
+
+accuracy	:0.791066666667
+precision	:0.252185314685
+recall		:0.2885
+f_1			:0.269123134328
+f_2			:0.280423794712
+
+
+======================================================================
+
+
