@@ -608,7 +608,7 @@ Logistic Regression is implemented with top 3 performing models reported here. `
 
  > Pipeline used to create the best LR model **LR_6**
  
- > **StandardScaler >>> PCA(n_components=1) >>> LogisticRegression**
+ > **StandardScaler >> PCA(n_components=1) >> LogisticRegression**
  
  > All features are selected, and the first component of PCA is used.
 
@@ -643,7 +643,7 @@ Since Naive Bayes have not many parameters to tune, we control the number of fea
 
  > Pipeline used to create the best NB model **Model-2**
  
- > **SelectKBest(k=8) >>> GaussianNB**
+ > **SelectKBest(k=8) >> GaussianNB**
  
  > 8 features selected: ['salary', 'bonus', 'exercised_stock_options', 'total_stock_value', 'deferred_income', 'bonus_log', 'other_log', 'expenses_sqrt']
 
@@ -672,7 +672,7 @@ Various Decision Tree models are tried and can be found in `DT_.txt`. The model 
 
  > Pipeline used to create the best DT model **Model-2**
  
- > **MinMaxScaler >>> DecisionTreeClassifier(max_depth=5)**
+ > **MinMaxScaler >> DecisionTreeClassifier(max_depth=5)**
  
  > 11 features are used as shown in the tree diagram
 
@@ -736,20 +736,17 @@ Pipeline used to create the best models for each algorithm
 
 We have chosen the best performing model in each algorithm implementation to draw a comparison. All three pass minimum requirements of the project i.e. `Precision >0.3 and Recall >0.3`. We chose Logistic Regression as the final Algorithm due to its simplicity with highest `f1 score`.
 
- #### Selected model
+#### Selected model
  
  > Pipeline used to create the best LogisticRegression [LR_6]
  
- > **StandardScaler >>> PCA(n_components=1) >>> LogisticRegression** 
+ > **StandardScaler >> PCA(n_components=1) >> LogisticRegression** 
  
  > All features are selected, and the first component of PCA is used.
  
- > **Selected Features : **['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
-
 ## Validate and Evaluate
 
-> **Validation:** Model validation is referred to as the process where a trained model is evaluated with a testing data set. The testing data set is a separate portion of the same data set from which the training set is derived. The main purpose of using the testing data set is to test the **generalization** ability of a trained model. Model validation is carried out after model training. Together with model training, model validation aims to find an optimal model with the best performance based on the scores mentioned below
-.
+> **Validation:** Model validation is referred to as the process where a trained model is evaluated with a testing data set. The testing data set is a separate portion of the same data set from which the training set is derived. The main purpose of using the testing data set is to test the **generalization** ability of a trained model. Model validation is carried out after model training. Together with model training, model validation aims to find an optimal model with the best performance based on the scores mentioned below.
 
 Here, validation of the classifier is done through the function `test_classifier` where data is split into train and test set using  `StratifiedShuffleSplit`. Since we have a class imbalance in our dataset, `StratifiedShuffleSplit` ensures that the test and train data contains equal proportions of classes. Using the function `test_classifier`, we perform  validation around  1000 fold and aggregate the results to report the performance metric.
 
