@@ -42,7 +42,7 @@ Since there are very few POIs(18) compared to Non-POIs (128) in the dataset, thi
 
 ## Outlier Investigation
 
-Two outliers are identified for the keys **"TOTAL", "LOCKHART EUGENE E",** ` and ` **"THE TRAVEL AGENCY IN THE PARK"**. These outliers are handled in the original code in preprocessing.
+Two outliers are identified for the keys **"TOTAL", "LOCKHART EUGENE E",**  and  **"THE TRAVEL AGENCY IN THE PARK"**. These outliers are handled in the original code in preprocessing.
 
 
 ![png](output_5_0.png)
@@ -246,7 +246,7 @@ What features did you end up using in your POI identifier, and what selection pr
 Did you have to do any scaling? Why or why not? 
 * Yes, feature scaling was used in the logistic regresion model. We did not find any tangible increase in the perfomance using features scaling in Naive Bayes and Decision Tree algorithms.
 
-** No. of features after adding 5 new features :25 **
+**No. of features after adding 5 new features :25**
 
     0 salary
     1 bonus
@@ -785,7 +785,6 @@ Evaluation of the models for each algorithm is based on the perfomance scores. W
 
 
 
-
 ![png](output_38_0.png)
 
 
@@ -795,7 +794,7 @@ We have created a POI identifier based on Logistic Regression as shown above. We
 
 ## References
 
-http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
-http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier.html#sklearn.ensemble.AdaBoostClassifier
-http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html
-http://scikit-learn.org/stable/auto_examples/plot_digits_pipe.html
+- http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+- http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier.html#sklearn.ensemble.AdaBoostClassifier
+- http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html
+- http://scikit-learn.org/stable/auto_examples/plot_digits_pipe.html
