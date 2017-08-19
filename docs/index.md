@@ -8,16 +8,33 @@ The goal of this project is to create a predicitve model which will identify per
 ## Data Exploration
 
 The following questions are answered by data exploration:
-
-   - total number of data points
-   - allocation across classes (POI/non-POI)
-   - number of features used
-   - are there features with many missing values?
     
-    * Total number of data points	: 146
-    * Total number of poi		: 18 
-    * Total number of non-poi		: 128
-    * No of features in original dataset: 21
+    - Total number of data points	: 146
+    - Total number of poi		: 18 
+    - Total number of non-poi		: 128
+    - No of features in original dataset: 21
+    - No. of NaNs (missing values) in each category
+        {'bonus': 64,
+         'deferral_payments': 107,
+         'deferred_income': 97,
+         'director_fees': 129,
+         'email_address': 35,
+         'exercised_stock_options': 44,
+         'expenses': 51,
+         'from_messages': 60,
+         'from_poi_to_this_person': 60,
+         'from_this_person_to_poi': 60,
+         'loan_advances': 142,
+         'long_term_incentive': 80,
+         'other': 53,
+         'poi': 0,
+         'restricted_stock': 36,
+         'restricted_stock_deferred': 128,
+         'salary': 51,
+         'shared_receipt_with_poi': 60,
+         'to_messages': 60,
+         'total_payments': 21,
+         'total_stock_value': 20}
 
 
 Since there are very few POIs(18) compared to Non-POIs (128) in the dataset, this is a class imbalance problem. 
@@ -46,19 +63,6 @@ Each column form data is explored through histograms for normality. We identifie
     *   log(1+total_payments)
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -622,14 +626,11 @@ Pipeline(steps=[('StandardScaler', StandardScaler(copy=True, with_mean=True, wit
   svd_solver='auto', tol=0.0, whiten=False)), ('classifLR', LogisticRegression(C=9.9999999999999995e-07, class_weight=None,random_state=None,
           solver='liblinear', tol=1e-06, verbose=0, warm_start=False))])
 
-Selected Features	:
-['salary', 'bonus', 'to_messages', 'deferral_payments', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'restricted_stock_deferred', 'total_stock_value', 'expenses', 'loan_advances', 'from_messages', 'other', 'from_this_person_to_poi', 'director_fees', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person', 'bonus_log', 'salary_log', 'other_log', 'expenses_sqrt', 'total_payments_log']
-
-accuracy	:0.766733333333
-precision	:0.345750154353
-recall		:0.84
-f_1			:0.489867327599
-f_2			:0.653238976592
+      accuracy	:0.766733333333
+      precision	:0.345750154353
+      recall		:0.84
+      f_1			:0.489867327599
+      f_2			:0.653238976592
 
 -----
 
@@ -657,14 +658,11 @@ n_features	:20
 Classifier	:
 `Pipeline(steps=[('scaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('selK', SelectKBest(k=13, score_func=<function f_classif at 0x109f9a9b0>)), ('classifNB', GaussianNB(priors=None))])`
 
-Selected Features	:
-['salary', 'bonus', 'total_payments', 'exercised_stock_options', 'restricted_stock', 'shared_receipt_with_poi', 'total_stock_value', 'expenses', 'loan_advances', 'deferred_income', 'long_term_incentive', 'email_address', 'from_poi_to_this_person']
-
-accuracy	:0.781466666667
-precision	:0.306948640483
-recall		:0.508
-f_1			:0.382674199623
-f_2			:0.449160035367
+      accuracy	:0.781466666667
+      precision	:0.306948640483
+      recall		:0.508
+      f_1			:0.382674199623
+      f_2			:0.449160035367
 
 --- 
 
@@ -683,38 +681,6 @@ Various Decision Tree models are tried and can be found in `DT_.txt`. The model 
 
 
 ```python
-import warnings
-warnings.filterwarnings('ignore')
-from sklearn.tree import DecisionTreeClassifier, export_graphviz
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.model_selection import GridSearchCV
-from sklearn.pipeline import Pipeline
-from IPython.display import Image  
-import pydotplus
-from tester import test_classifier
-
-features_list = ['poi',
-				'salary','bonus','to_messages',
-				'deferral_payments','total_payments','exercised_stock_options',
-				'restricted_stock','shared_receipt_with_poi',
-				'restricted_stock_deferred','total_stock_value',
-				'expenses','loan_advances','from_messages','other',
-				'from_this_person_to_poi','director_fees',
-				'deferred_income','long_term_incentive',
-				'email_address','from_poi_to_this_person']
-
-### Load the dictionary containing the dataset
-with open("final_project_dataset.pkl", "r") as data_file:
-    data_dict = pickle.load(data_file)
-
-### Task 2: Remove outliers
-[data_dict.pop(key) for key in ["TOTAL","LOCKHART EUGENE E", "THE TRAVEL AGENCY IN THE PARK"]]
-
-### Task 3: Create new feature(s)
-### Store to my_dataset for easy export below.
-features_list, my_dataset = add_features(features_list, data_dict)
-data = featureFormat(my_dataset, features_list, sort_keys = True)
-labels, features = targetFeatureSplit(data)
 
 params = [{
     'classifDT__max_features':["sqrt","log2"],
@@ -747,21 +713,12 @@ Image(graph.create_png())
 ```
 
     Features used [('exercised_stock_options', 0.26311422700723708), ('expenses', 0.202422866059673), ('bonus_log', 0.14368552060296547), ('deferred_income', 0.11622047756050777), ('total_payments', 0.10459842980445701), ('from_this_person_to_poi', 0.074381105638724979), ('bonus', 0.029776132456896025), ('restricted_stock', 0.023416394401911515), ('salary', 0.020919685960891402), ('total_stock_value', 0.019271468279124231), ('email_address', 0.0021936922276114957)]
-    Pipeline(steps=[('MinMaxScaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('classifDT', DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=5,
-                max_features='log2', max_leaf_nodes=None,
-                min_impurity_split=1e-07, min_samples_leaf=1,
-                min_samples_split=2, min_weight_fraction_leaf=0.0,
-                presort=True, random_state=42, splitter='best'))])
-    	Accuracy: 0.85373	Precision: 0.44387	Recall: 0.38350	F1: 0.41148	F2: 0.39422
-    	Total predictions: 15000	True positives:  767	False positives:  961	False negatives: 1233	True negatives: 12039
-    
-    
-    
-    accuracy	:0.853733333333
-    precision	:0.443865740741
-    recall		:0.3835
-    f_1		:0.411480686695
-    f_2		:0.394222861842
+        
+        accuracy  :0.853733333333
+        precision :0.443865740741
+        recall    :0.3835
+        f_1   :0.411480686695
+        f_2   :0.394222861842
   
 
 ![png](output_33_1.png)
@@ -824,98 +781,12 @@ $$F_1 = 2 \cdot \frac{1}{\tfrac{1}{\mathrm{recall}} + \tfrac{1}{\mathrm{precisio
 $$F_\beta = (1 + \beta^2) \cdot \frac{\mathrm{precision} \cdot \mathrm{recall}}{(\beta^2 \cdot \mathrm{precision}) + \mathrm{recall}} = \frac {(1 + \beta^2) \cdot \mathrm{TP} }{(1 + \beta^2) \cdot \mathrm{TP} + \beta^2 \cdot \mathrm{FN} + \mathrm{FP}}$$
 
 
-```python
-def test_classifier(clf, dataset, feature_list, folds = 1000):
-    data = featureFormat(dataset, feature_list, sort_keys = True)
-    labels, features = targetFeatureSplit(data)
-    cv = StratifiedShuffleSplit(labels, folds, random_state = 42)
-    true_negatives = 0
-    false_negatives = 0
-    true_positives = 0
-    false_positives = 0
-    for train_idx, test_idx in cv: 
-        features_train = []
-        features_test  = []
-        labels_train   = []
-        labels_test    = []
-        for ii in train_idx:
-            features_train.append( features[ii] )
-            labels_train.append( labels[ii] )
-        for jj in test_idx:
-            features_test.append( features[jj] )
-            labels_test.append( labels[jj] )
-        
-        ### fit the classifier using training set, and test on test set
-        clf.fit(features_train, labels_train)
-        predictions = clf.predict(features_test)
-        for prediction, truth in zip(predictions, labels_test):
-            if prediction == 0 and truth == 0:
-                true_negatives += 1
-            elif prediction == 0 and truth == 1:
-                false_negatives += 1
-            elif prediction == 1 and truth == 0:
-                false_positives += 1
-            elif prediction == 1 and truth == 1:
-                true_positives += 1
-            else:
-                print "Warning: Found a predicted label not == 0 or 1."
-                print "All predictions should take value 0 or 1."
-                print "Evaluating performance for processed predictions:"
-                break
-    try:
-        total_predictions = true_negatives + false_negatives + false_positives + true_positives
-        accuracy = 1.0*(true_positives + true_negatives)/total_predictions
-        precision = 1.0*true_positives/(true_positives+false_positives)
-        recall = 1.0*true_positives/(true_positives+false_negatives)
-        f1 = 2.0 * true_positives/(2*true_positives + false_positives+false_negatives)
-        f2 = (1+2.0*2.0) * precision*recall/(4*precision + recall)
-        print clf
-        print PERF_FORMAT_STRING.format(accuracy, precision, recall, f1, f2, display_precision = 5)
-        print RESULTS_FORMAT_STRING.format(total_predictions, true_positives, false_positives, false_negatives, true_negatives)
-        print ""
-    except:
-        print "Got a divide by zero when trying out:", clf
-        print "Precision or recall may be undefined due to a lack of true positive predicitons."
-    return accuracy, precision, recall, f1, f2
-    
-    ```
 
 ## Evaluation
 
 Evaluation of the models for each algorithm is based on the perfomance scores. We found that `Logistic_Regression` performs well in each scores evaluvated. 
 
 
-```python
-Algorithms = {
-"Logistic_Regression":{
-'accuracy'	:0.766733333333,
-'precision'	:0.345750154353,
-'recall'	:0.84,
-'f_1'		:0.489867327599,
-'f_2'		:0.653238976592},
-"Naive_Bayes" : {
-'accuracy'	:0.781466666667,
-'precision'	:0.306948640483,
-'recall'	:0.508,
-'f_1'		:0.382674199623,
-'f_2'		:0.449160035367},
-"Decision_Tree" : {
-'accuracy'	:0.853733333333,
-'precision'	:0.443865740741,
-'recall'	:0.3835,
-'f_1'		:0.411480686695,
-'f_2'		:0.394222861842}}
-
-plt.figure(figsize=(10,5))
-for j, A_name in enumerate(Algorithms):
-    A_= Algorithms[A_name]
-    plt.bar((np.arange(len(A_))+0.2*j)-0.2, A_.values(), align='center', width=0.2, label=A_name)
-    plt.xticks(range(len(A_)), A_.keys())
-plt.ylabel("Scores")
-plt.axhline(y =0.3, color = "k", linewidth=0.5)
-plt.legend()
-plt.show()
-```
 
 
 ![png](output_38_0.png)
