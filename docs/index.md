@@ -592,7 +592,7 @@ Unlike univariate feature selectors such as `SlectKBest` and `RFE`, dimensionali
 ### Tuning Algorithm
 Models are tunned using `tuning_[Model Name].py` and parameters are printed to a `.txt` file in the corresponding folder. `F1` score is used to evaluate the model since it allows optimizing both `Recall` and `Precision`. A ten fold crossvalidation is used in `GridsechCV` to pick the best tuning parameters, which will split data 10-fold to evaluate the scores for each fold.
 
-** Algorithm and corresponding folders**
+**Algorithm and corresponding folders**
 * Logistic Regression - /LR_Results
 * Decision Tree - /DT_results
 * Naive Bayes - /NB_results
@@ -629,8 +629,8 @@ Pipeline(steps=[('StandardScaler', StandardScaler(copy=True, with_mean=True, wit
       accuracy	:0.766733333333
       precision	:0.345750154353
       recall		:0.84
-      f_1			:0.489867327599
-      f_2			:0.653238976592
+      f_1		:0.489867327599
+      f_2		:0.653238976592
 
 -----
 
@@ -661,8 +661,8 @@ Classifier	:
       accuracy	:0.781466666667
       precision	:0.306948640483
       recall		:0.508
-      f_1			:0.382674199623
-      f_2			:0.449160035367
+      f_1		:0.382674199623
+      f_2		:0.449160035367
 
 --- 
 
@@ -714,9 +714,9 @@ Image(graph.create_png())
 
     Features used [('exercised_stock_options', 0.26311422700723708), ('expenses', 0.202422866059673), ('bonus_log', 0.14368552060296547), ('deferred_income', 0.11622047756050777), ('total_payments', 0.10459842980445701), ('from_this_person_to_poi', 0.074381105638724979), ('bonus', 0.029776132456896025), ('restricted_stock', 0.023416394401911515), ('salary', 0.020919685960891402), ('total_stock_value', 0.019271468279124231), ('email_address', 0.0021936922276114957)]
         
-        accuracy  :0.853733333333
-        precision :0.443865740741
-        recall    :0.3835
+        accuracy :0.853733333333
+        precision:0.443865740741
+        recall   :0.3835
         f_1   :0.411480686695
         f_2   :0.394222861842
   
