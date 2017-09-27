@@ -3,7 +3,7 @@
   title: Find Fraud in Enron Data
 
 ---
-<!-- # Find Fraud in Enron Data -->
+
 ## Goal
 The goal of this project is to create a predicitve model which will identify person of interest or POI from the email data exchanged between employees. We extract various metrics from email data and use it in conjuction with a machine learning model to identify an employee who is potentially performing fraudulent activities.
 
