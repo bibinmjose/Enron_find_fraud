@@ -1,6 +1,6 @@
 ---
-
-title: Find Fraud in Enron Data
+layout:index
+<!-- title: Find Fraud in Enron Data -->
 
 ---
 
